@@ -1,14 +1,34 @@
 
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense" >
-    <ion-toolbar class="titlebox">
-      <ion-title size="large" class="title">Profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="header">
+    <div class="header-left">
+      <h2 class="header-left-h2">Profile</h2>
+   </div>
+   <div class="header-right">
+    <ion-list class="header-right-lang">
+      <ion-item>
+        <ion-select placeholder="PT">
+          <ion-select-option value="apples">PT</ion-select-option>
+          <ion-select-option value="oranges">EN</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-toggle></ion-toggle>
+   </div>
   </div>
+  <div class="profile">
+    <ion-avatar class="avatar">
+      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+
+    <div class="profile-info">
+      <h2 >Rodrigo Mesquita</h2>
+
+    </div>
+
+ 
+  </div>
+
+
 </ion-content>
