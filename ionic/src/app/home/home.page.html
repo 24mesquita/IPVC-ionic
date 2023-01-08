@@ -1,6 +1,6 @@
 
-
 <ion-content [fullscreen]="true">
+
   <div class="header">
     <div class="header-left">
       <h2 class="header-left-h2">Profile</h2>
@@ -14,7 +14,7 @@
         </ion-select>
       </ion-item>
     </ion-list>
-    <ion-toggle></ion-toggle>
+    <ion-toggle class="dark-mode"></ion-toggle>
    </div>
   </div>
   <div class="profile">
@@ -24,11 +24,95 @@
 
     <div class="profile-info">
       <h2 >Rodrigo Mesquita</h2>
+    </div>
+  </div>
 
+  <div class="about">
+    <div class="about-title">
+        <h3>About</h3>
+    </div>
+    <div class="about-desc">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+  <div class="about-btn">
+    <ion-button>More</ion-button>
+  </div>
+  </div>
+
+  <div class="skills">
+    <div class="skills-title">
+        <h3>My Skills</h3>
+    </div>
+    <div class="skills-desc">
+      <div class="skills-unit"> 
+        <div class="skills-unit-container">
+          <ion-icon class="skills-unit-img"  name="logo-html5"></ion-icon>
+          <p class="skills-unit-desc">HTML</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="languages">
+    <div class="languages-title">
+        <h3>Languages</h3>
+    </div>
+    <div class="languages-desc">
+      <div class="languages-unit"> 
+        <div class="languages-unit-container">
+          <img src="https://img.icons8.com/doodle/48/null/portugal.png"/>      
+            <p class="languages-unit-desc">Portuguese</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="competences">
+    <div class="competences-title">
+        <h3>Competences</h3>
+    </div>
+    <div class="competences-desc">
+      <div class="competences-desc-type">
+        <p>High School</p>
+      </div>
+      <div class="competences-desc-name">
+        <p>Escola Secundária Rocha Peixoto</p>
+      </div>
+      <div class="competences-align">
+        <div class="competences-desc-date">
+          <p>2018-2021</p>
+        </div>
+        <div class="competences-btn">
+          <ion-button>More</ion-button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="contact">
+      <div class="contact-title">
+          <h3>Contact Me</h3>
+      </div>
+      <div class="contact-desc">
+        <ion-item>
+          <ion-label position="floating">Full Name</ion-label>
+          <ion-input placeholder="Enter text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">email</ion-label>
+          <ion-input placeholder="Enter text"></ion-input>
+        </ion-item>
+        <ion-textarea class="custom-textarea" placeholder="Your text here"></ion-textarea>
+      </div>
+
+      <div class="contact-btn">
+        <ion-button>Send</ion-button>
+      </div>
     </div>
 
- 
-  </div>
 
 
 </ion-content>

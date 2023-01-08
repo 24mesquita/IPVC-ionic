@@ -1,0 +1,71 @@
+{
+    "info": {
+    "name": "Marcelo Antunes Fernandes",
+    "address": "Braga, Portugal",
+    "photo": "https://..."
+    },
+    "contacts":[
+    {
+    "type": "Phone Number",
+    "contact": "123456789"
+    },
+    {
+    "type": "email",
+    "contact": "fernandesmarcelo@estg.ipvc.pt"
+    }
+    ],
+    "languages":[
+    {
+    "name": "Portuguese",
+    "level": "Native"
+    },
+    {
+    "name": "English",
+    "level": "Very good"
+    }
+    ],
+    "educations": [
+    {
+    "startAt": "sept 2010",
+    "endAt": "setp 2013",
+    "inProgress" : false,
+    "school": "ESTG - IPVC",
+"grade": 13,
+"logo": "https://..."
+},
+{
+"startAt": "sept 2012",
+"endAt": null,
+"inProgress" : true,
+"school": "ESTG - IPVC",
+"grade": null,
+"logo": "https://..."
+}
+],
+"experience": [
+{
+"startAt": "sept 2021",
+"endAt": null,
+"inProgress" : true,
+"comapny": "Wolf Smart Industries",
+"description": "Lorem ipsum",
+"logo": "https://..."
+},
+{
+"startAt": "mar 2016",
+"endAt": "aug 2021",
+"inProgress" : false,
+"comapny": "F3M",
+"description": "Lorem ipsum",
+"logo": "https://..."
+},
+{
+"startAt": "jan 2014",
+"endAt": "feb 2016",
+"inProgress" : false,
+"comapny": "Eticadata",
+"description": "Lorem ipsum",
+"logo": "https://..."
+}
+]
+}

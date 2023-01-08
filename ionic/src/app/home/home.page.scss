@@ -46,32 +46,37 @@ margin-left: 10px;
 .header-left-h2{
   font-size: 35px;
 }
+
+
 .header-right{
   display: inline-flex;
   position: relative;
   width: 50%;
   text-align: right;
-  margin-top: 25px;
-  
+  margin-top: 20px;
+  margin-right: 10px;
+
 
 }
+.dark-mode{
+    margin-top:7px;
+}
+
 .header-right-lang{
   position: relative;
   width: 50%;
 
 }
 .profile{
-  position: absolute;
+
   width: 100%;
   margin-top: 30%;
-  margin-left: 90px;
+  text-align: center;
 }
-.profile-info{
-  position:relative;
 
-}
+
 .avatar{
-
+margin-left: 25%;
   position: relative;
   width: 200px;
   height: 200px;
@@ -100,4 +105,149 @@ ion-toggle {
   /* Required for iOS handle to overflow the height of the track */
   overflow: visible;
   contain: none;
+}
+
+.about{
+margin-top: 20px;
+}
+.about-title{
+  margin-left: 10px;
+}
+.about-desc{
+  margin-left: 10px;
+  width: 90%;
+  text-align: justify;
+
+}
+
+
+.about ion-button{
+
+  --background: #000;
+  --background-checked: #000
+  --background-hover: #000;
+  --background-activated: #000;
+  --background-focused: #000;
+  --border-radius: 0;
+height:25px;
+width: 80px;
+margin-left: 70%;
+}
+
+
+.skills{
+  margin-top: 20px;
+}
+.skills-title{
+    margin-left: 10px;
+}
+
+.skills-unit{
+width: 50%;
+margin-left: 10px;
+}
+.skills-unit-img{
+ width: 30px;
+ height: 30px;
+ margin-top: 10px;
+}
+.skills-unit-desc{
+margin-left: 5px;
+ }
+.skills-unit-container{
+  display: inline-flex;
+}
+
+
+.languages{
+  margin-top: 20px;
+}
+.languages-title{
+    margin-left: 10px;
+}
+
+.languages-unit{
+width: 50%;
+margin-left: 10px;
+}
+.languages-unit-img{
+ width: 30px;
+ height: 30px;
+ margin-top: 10px;
+}
+.languages-unit-desc{
+margin-left: 5px;
+ }
+.languages-unit-container{
+  display: inline-flex;
+}
+
+
+.competences{
+  margin-top: 20px;
+}
+.competences-title{
+    margin-left: 10px;
+}
+.competences-align{
+  display: inline-flex;
+  justify-content: space-between;
+
+}
+.competences-desc-type{
+  margin-left: 15px;
+}
+
+.competences-desc-name{
+  margin-left: 25px;
+}
+.competences-desc-date{
+  margin-top: -10px;
+  margin-left: 25px;
+}
+
+.competences ion-button{
+
+  --background: #000;
+  --background-checked: #000
+  --background-hover: #000;
+  --background-activated: #000;
+  --background-focused: #000;
+  --border-radius: 0;
+height:25px;
+width: 80px;
+margin-left: 170px;
+}
+
+.contact{
+  margin-top: 20px;
+}
+.contact-title{
+  margin-left: 10px;
+}
+
+ion-textarea.custom-textarea {
+  margin-top: 20px;
+  width: 95%;
+  border: 1px solid #000;
+  margin-left: 10px;
+  height: 100px;
+}
+
+.contact-btn{
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+.contact ion-button{
+
+  --background: #000;
+  --background-checked: #000
+  --background-hover: #000;
+  --background-activated: #000;
+  --background-focused: #000;
+  --border-radius: 0;
+  height:30px;
+width: 90%;
+
 }

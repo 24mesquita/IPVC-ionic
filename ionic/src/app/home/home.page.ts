@@ -1,12 +1,18 @@
-import { Component } from '@angular/core';
+import { ToastController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 
-@Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
-})
-export class HomePage {
 
-  constructor() {}
 
-}
+export class TabInfoPage {
+  constructor(
+  private translateService : TranslateService,
+  private toastController : ToastController) {
+  }
+  async showToast() {
+  const toast = await this.toastController.create({
+  message: this.translateService.instant("hello"),
+  duration: 4000,
+  });
+  await toast.present();
+  }
+  }
