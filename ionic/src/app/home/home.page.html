@@ -1,6 +1,4 @@
-
 <ion-content [fullscreen]="true">
-
   <div class="header">
     <div class="header-left">
       <h2 class="header-left-h2">Profile</h2>
@@ -8,18 +6,17 @@
    <div class="header-right">
     <ion-list class="header-right-lang">
       <ion-item>
-        <ion-select placeholder="PT">
-          <ion-select-option value="apples">PT</ion-select-option>
-          <ion-select-option value="oranges">EN</ion-select-option>
-        </ion-select>
+          <img src="https://img.icons8.com/doodle/48/null/portugal.png"(click)="changeLanguage('pt')" width="30px"/>
+          <img src="https://img.icons8.com/doodle/48/null/great-britain.png" (click)="changeLanguage('en')" width="30px"/>
+
       </ion-item>
     </ion-list>
-    <ion-toggle class="dark-mode"></ion-toggle>
+    <ion-icon class="moon"slot="end" [name]="getIcon()" (click)="changeDarkMode()"></ion-icon>
    </div>
   </div>
   <div class="profile">
     <ion-avatar class="avatar">
-      <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      <img alt="" src="../../assets/Foto.jpeg" />
     </ion-avatar>
 
     <div class="profile-info">
@@ -29,20 +26,20 @@
 
   <div class="about">
     <div class="about-title">
-        <h3>About</h3>
+        <h3>{{ 'about' | translate }}</h3>
     </div>
     <div class="about-desc">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      <p>{{ 'aboutme' | translate }}
       </p>
     </div>
   <div class="about-btn">
-    <ion-button>More</ion-button>
+    <ion-button (click)="setOpen(true)">{{ 'more' | translate }}</ion-button>
   </div>
   </div>
 
   <div class="skills">
     <div class="skills-title">
-        <h3>My Skills</h3>
+        <h3>{{ 'myskills' | translate }}</h3>
     </div>
     <div class="skills-desc">
       <div class="skills-unit"> 
@@ -56,7 +53,7 @@
 
   <div class="languages">
     <div class="languages-title">
-        <h3>Languages</h3>
+        <h3>{{ 'languages' | translate }}</h3>
     </div>
     <div class="languages-desc">
       <div class="languages-unit"> 
@@ -71,7 +68,7 @@
 
   <div class="competences">
     <div class="competences-title">
-        <h3>Competences</h3>
+        <h3>{{ 'competences' | translate }}</h3>
     </div>
     <div class="competences-desc">
       <div class="competences-desc-type">
@@ -85,7 +82,7 @@
           <p>2018-2021</p>
         </div>
         <div class="competences-btn">
-          <ion-button>More</ion-button>
+          <ion-button (click)="setOpen(true)">{{ 'more' | translate }}</ion-button>
         </div>
       </div>
     </div>
@@ -93,26 +90,40 @@
 
     <div class="contact">
       <div class="contact-title">
-          <h3>Contact Me</h3>
+          <h3>{{ 'contactme' | translate }}</h3>
       </div>
       <div class="contact-desc">
         <ion-item>
-          <ion-label position="floating">Full Name</ion-label>
+          <ion-label position="floating">{{ 'fullname' | translate }}</ion-label>
           <ion-input placeholder="Enter text"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label position="floating">email</ion-label>
+          <ion-label position="floating">{{ 'email' | translate }}</ion-label>
           <ion-input placeholder="Enter text"></ion-input>
         </ion-item>
-        <ion-textarea class="custom-textarea" placeholder="Your text here"></ion-textarea>
+        <ion-textarea class="custom-textarea" placeholder="{{ 'yourtexthere' | translate }}"></ion-textarea>
       </div>
 
       <div class="contact-btn">
-        <ion-button>Send</ion-button>
+        <ion-button>{{ 'send' | translate }}</ion-button>
       </div>
     </div>
-
-
-
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title> {{ 'about' | translate}} </ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="setOpen(false)">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <p>
+         {{ 'aboutme' | translate }}
+          </p>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
 </ion-content>
