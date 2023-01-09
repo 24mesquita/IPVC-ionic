@@ -17,6 +17,12 @@ export class HomePage implements OnInit {
   setOpen(isOpen: boolean) {
     this.isModalOpen = isOpen;
   }
+
+  isModalOpen2 = false;
+
+  setOpen2(isOpen: boolean) {
+    this.isModalOpen2 = isOpen;
+  }
   me: any = {};
   @Input() isChecked : boolean | undefined;
 
