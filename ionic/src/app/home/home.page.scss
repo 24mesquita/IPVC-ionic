@@ -243,14 +243,17 @@ ion-textarea.custom-textarea {
 
   --background: #000;
   --background-checked: #000
-  --background-hover: #000;
+  --background-hover: #fff;
   --background-activated: #000;
   --background-focused: #000;
   --border-radius: 0;
   height:30px;
 width: 90%;
+margin-bottom: 30px;
 
 }
+
+
 
 .moon{
   margin-top: 10px;

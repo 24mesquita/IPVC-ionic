@@ -84,7 +84,7 @@
       </div>
       <div class="competences-align">
         <div class="competences-desc-date">
-          <p>{{item.year_start}}-{{item.end}}</p>
+          <p>{{item.year_start}}-{{item.year_end}}</p>
         </div>
         <div class="competences-btn">
           <ion-button (click)="setOpen2(true)">{{ 'more' | translate }}</ion-button>
@@ -97,22 +97,23 @@
       <div class="contact-title">
           <h3>{{ 'contactme' | translate }}</h3>
       </div>
+      <form action="https://formbold.com/s/3Nv0Y" method="post">
       <div class="contact-desc">
         <ion-item>
           <ion-label position="floating">{{ 'fullname' | translate }}</ion-label>
-          <ion-input placeholder="Enter text"></ion-input>
+          <ion-input type="text" name="name" placeholder="Enter text"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label position="floating">{{ 'email' | translate }}</ion-label>
-          <ion-input placeholder="Enter text"></ion-input>
+          <ion-input placeholder="Enter text" type="email" name="email"></ion-input>
         </ion-item>
-        <ion-textarea class="custom-textarea" placeholder="{{ 'yourtexthere' | translate }}"></ion-textarea>
+        <ion-textarea name="message" class="custom-textarea" placeholder="{{ 'yourtexthere' | translate }}"></ion-textarea>
       </div>
-
       <div class="contact-btn">
-        <ion-button>{{ 'send' | translate }}</ion-button>
+        <ion-button type="submit">{{ 'send' | translate }}</ion-button>
       </div>
+       </form>
     </div>
     <ion-modal [isOpen]="isModalOpen">
       <ng-template>
