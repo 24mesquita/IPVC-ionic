@@ -20,7 +20,7 @@
     </ion-avatar>
 
     <div class="profile-info">
-      <h2 >Rodrigo Mesquita</h2>
+      <h2>{{info.name}}</h2>
     </div>
   </div>
 
@@ -29,7 +29,7 @@
         <h3>{{ 'about' | translate }}</h3>
     </div>
     <div class="about-desc">
-      <p>{{ 'aboutme' | translate }}
+      <p>{{info.about}}
       </p>
     </div>
   <div class="about-btn">
@@ -42,12 +42,17 @@
         <h3>{{ 'myskills' | translate }}</h3>
     </div>
     <div class="skills-desc">
-      <div class="skills-unit"> 
+
+
+      <div class="skills-unit" *ngFor="let item of skills"> 
         <div class="skills-unit-container">
-          <ion-icon class="skills-unit-img"  name="logo-html5"></ion-icon>
-          <p class="skills-unit-desc">HTML</p>
+          <ion-icon class="skills-unit-img"  name="logo-{{item.image}}"></ion-icon>
+          <p class="skills-unit-desc">{{item.name}}</p>
         </div>
       </div>
+
+
+
     </div>
   </div>
 
@@ -56,30 +61,30 @@
         <h3>{{ 'languages' | translate }}</h3>
     </div>
     <div class="languages-desc">
-      <div class="languages-unit"> 
+      <div class="languages-unit" *ngFor="let item of languages"> 
         <div class="languages-unit-container">
-          <img src="https://img.icons8.com/doodle/48/null/portugal.png"/>      
-            <p class="languages-unit-desc">Portuguese</p>
+          <img src="https://img.icons8.com/doodle/48/null/{{item.image}}.png"/>      
+            <p class="languages-unit-desc">{{item.name}}</p>
         </div>
       </div>
     </div>
   </div>
 
 
-  <div class="competences">
+  <div class="competences" >
     <div class="competences-title">
         <h3>{{ 'competences' | translate }}</h3>
     </div>
-    <div class="competences-desc">
+    <div class="competences-desc" *ngFor="let item of competences">
       <div class="competences-desc-type">
-        <p>High School</p>
+        <p>{{item.type}}</p>
       </div>
       <div class="competences-desc-name">
-        <p>Escola Secundária Rocha Peixoto</p>
+        <p>{{item.institution}}</p>
       </div>
       <div class="competences-align">
         <div class="competences-desc-date">
-          <p>2018-2021</p>
+          <p>{{item.year_start}}-{{item.end}}</p>
         </div>
         <div class="competences-btn">
           <ion-button (click)="setOpen2(true)">{{ 'more' | translate }}</ion-button>
@@ -121,7 +126,7 @@
         </ion-header>
         <ion-content class="ion-padding">
           <p>
-         {{ 'aboutme' | translate }}
+         {{ info.about}}
           </p>
         </ion-content>
       </ng-template>

@@ -1,17 +1,22 @@
-import { HttpClient } from '@angular/common/http';
+import { CrudService } from './../services/api/crud.service';
+
+import { Component, OnInit, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { LocalizationService } from './../services/localization/localization.service';
 import { Preferences } from '@capacitor/preferences';
-import { TranslateService } from '@ngx-translate/core';
-import { Component, Input, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 import { firstValueFrom } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage {
+
+
   isModalOpen = false;
 
   setOpen(isOpen: boolean) {
@@ -23,20 +28,58 @@ export class HomePage implements OnInit {
   setOpen2(isOpen: boolean) {
     this.isModalOpen2 = isOpen;
   }
-  me: any = {};
+  info: any = {};
+  skills: any = [];
+  languages: any = [];
+  competences: any = [];
+
   @Input() isChecked : boolean | undefined;
 
   constructor(
     private translateService: TranslateService,
     private toastController: ToastController,
     private LocalizationService: LocalizationService,
-    private http: HttpClient
-  ) {}
+    private http: HttpClient,
+    private crudService: CrudService
 
-  async ngOnInit() {
-    this.me = await firstValueFrom(
-      this.http.get('http://localhost:4242/api/me')
-    );
+  ) { }
+
+    //get data from api
+
+  ngOnInit() {
+      this.getinfo();
+      this.getskills();
+      this.getlanguages();
+      this.getcompetences();
+  }
+
+
+  async getinfo() {
+    this.crudService.getdata('info/getinfo').subscribe((res) => {
+      this.info = res;
+      console.log(this.info);
+    });
+  }
+
+  async getskills() {
+    this.crudService.getdata('skills/getSkills').subscribe((res) => {
+      this.skills = res;
+      console.log(this.skills);
+    });
+  }
+
+  async getlanguages() {
+    this.crudService.getdata('languages/getLanguages').subscribe((res) => {
+      this.languages = res;
+      console.log(this.languages);
+    });
+  }
+
+  async getcompetences() {
+    this.crudService.getdata('competences/getCompetences').subscribe((res) => {
+      this.competences = res;
+      console.log(this.competences);
+    });
   }
 
   async changeLanguage(language: string) {
@@ -84,5 +127,6 @@ export class HomePage implements OnInit {
     }
     return 'moon';
   }
+  
 }
 
